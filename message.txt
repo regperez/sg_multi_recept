@@ -3,10 +3,3 @@ Estimados señores,
 Aprovechamos la oportunidad para notificarles que se han realizado ajustes al tablero de Control “Llegadas y Salidas de Buques”. Estos ajustes van destinados a mejorar la calidad de datos presentados en el tablero de control actual, así como los tiempos de actualización del tablero de Control, de cara a los reportes sobre anomalías a la hora de la consulta. 
 
 Agradecemos su comprensión y nos disculpamos por los inconvenientes. Agradecemos cualquier comentario o consulta, así como todo reporte de buques que debieran aparecer en el tablero y que no lo hacen.
-Por favor tener en cuenta que: 
-1.	Los eventos registrados en el tablero tienen un desfase de 2 horas respecto al tiempo real de ejecución como regla general (ej. Un buque atraca a las 9:00 am, dicho evento no se registrará sino hasta la siguiente “carga” del tablero a las 11:00 am, suponiendo que el ciclo del tablero sea de 09:00am hr a 11:00am hr). . 
-2.	Se está trabajando en llevar a cabo adecuaciones a los mecanismos de despliegue, para las mejoras continuas en la visualización de los tableros.
-3.	Los datos de visita de buque aparecerán siempre y cuando el buque haya registrado la visita en VUMPA. 
-
-
-Servicio al cliente del Portal Tecnológico de Comercio Exterior y Logística (PORTCEL)
