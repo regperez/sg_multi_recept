@@ -2,11 +2,11 @@ import csv
 import sendgrid
 from sendgrid.helpers.mail import Mail, Email, To, Content, Personalization
 
-# Dirección de correo electrónico y API Key de SendGrid
+# SendGrid email address and API Key
 SENDGRID_API_KEY = 'SendGrip API Key'
 FROM_EMAIL = 'test@example.com'
 
-# Leer las direcciones de correo electrónico de destinatario desde un archivo CSV
+# Read recipient email addresses from a CSV file
 def read_recipients(file_name):
     recipients = []
     with open(file_name, 'r') as file:
@@ -15,19 +15,19 @@ def read_recipients(file_name):
             recipients.append(row[0])
     return recipients
 
-# Leer el cuerpo del mensaje desde un archivo de texto
+# Read the message body from a text file
 def read_message_body(file_name):
     with open(file_name, 'r') as file:
         return file.read()
 
-# se crea una instancia de sendgrid.SendGridAPIClient
+# A SendGrid instance is created. SendGridAPIClient
 def main():
     recipients = read_recipients('recipients.csv')
     message_body = read_message_body('message.txt')
 
     sg = sendgrid.SendGridAPIClient(api_key=SENDGRID_API_KEY)
 
-# Se envían los correos a cada destinatario utilizando un bucle for
+# Emails are sent to each recipient using a for loop
     for recipient in recipients:
         mail = Mail(
             from_email=Email(FROM_EMAIL),
@@ -39,7 +39,7 @@ def main():
         personalization.add_to(Email(recipient))
         mail.add_personalization(personalization)
 
-# Si el envío del correo falla, se imprimirá un mensaje de error.
+# If the mail delivery fails, an error message will be printed.
         try:
             response = sg.send(mail)
             print('Email sent to', recipient)
